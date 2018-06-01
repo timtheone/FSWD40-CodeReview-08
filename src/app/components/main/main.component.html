@@ -1,0 +1,36 @@
+<div class="container-fluid" id="wrapper-main">
+<div class="container">
+  <div class="row" id="preview"></div>
+  <div class="row" id="controls">
+  <form class="col-lg-3">
+      <div class="form-group">
+          <label for="exampleFormControlSelect1">Filter by gender</label>
+          <select class="form-control" (change)="filterGender(gender.value)" #gender>
+            <option *ngFor='let gender of genders'>{{gender}}</option>
+          </select>
+        </div>
+      </form>
+      <button id="reset" class="btn btn-warning col-lg-1 offset-lg-8" (click)="reset()">Reset</button>
+      </div>
+  <div class="row" id="main">
+    <div class="card col-lg-3 col-md-6 col-sm-12" *ngFor='let person of persons; let i = index;'>
+      <div class="bordered">
+        <div id="likeDiv" (mouseenter)="showLikeControls(i)" (mouseleave)="hideLikeControls(i)">
+          <p [attr.id]="'like'+i"><span *ngIf="show===i" (click)="decrementLike(person)" id="likeControlsIncrement"><i class="fa fa-minus"></i></span>{{person.like}}<i class="fa fa-heart"></i><span *ngIf="show===i" (click)="incrementLike(person)" id="likeControlsDecrement"><i class="fa fa-plus"></i></span></p>
+        </div>
+        <img class="card-img-top" src="{{person.image}}" alt="Person's image">
+        <div class="card-body">
+          <h5 class="card-title">{{person.name}} {{person.surname}}</h5>
+          <p class="card-text">Age: {{person.age}}<br>
+            <span *ngIf="person.inRelation == true">{{person.name}} is in <strong>relationship</strong></span>
+            <span *ngIf="person.inRelation == false">{{person.name}} is <strong>single</strong></span>
+          </p>
+          <button class="btn btn-secondary btn-sm" (click)="preview(i)">More</button>
+          <div class="progressbar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

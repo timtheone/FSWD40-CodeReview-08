@@ -1,0 +1,46 @@
+#wrapper-main {
+    background-color: #F8F9FA;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.bordered {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 0.25rem;
+    background-color: white;
+}
+.card {
+    border: none;
+    padding: 15px;
+    background-color: #F8F9FA;
+}
+
+#likeDiv {
+    color: red;
+    position: absolute;
+    margin-top: 0px;
+    font-size: 30px;
+    right: 30px;
+    margin-bottom: 0px;
+    opacity: 0.6;
+}
+
+#reset {
+    height: 40px;
+    margin-top: 29px;
+}
+
+#likeDiv:hover {
+    transform: scale(1.2,1.2);
+    transition-duration: 0.2s;
+    opacity: 1;
+}
+
+#likeControlsIncrement {
+    font-size: 30px;
+}
+
+:host ::ng-deep .progress {
+    margin-top: 20px!important;
+    height: 35px!important;
+}

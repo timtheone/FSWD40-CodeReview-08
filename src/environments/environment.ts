@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: "AIzaSyBDXcFdt02_LF53qDt_b84KRMyo4Eircng",
+  authDomain: "dateapp-95aee.firebaseapp.com",
+  databaseURL: "https://dateapp-95aee.firebaseio.com",
+  projectId: "dateapp-95aee",
+  storageBucket: "",
+  messagingSenderId: "398336742262"
 };
 
 /*
