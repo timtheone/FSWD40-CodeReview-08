@@ -1,4 +1,3 @@
-import { GenderFilterPipe } from './../../gender-filter.pipe';
 import { PersonService } from './../../services/person.service';
 import { Person } from './../../models/person.model';
 import { Component, OnInit } from '@angular/core';
